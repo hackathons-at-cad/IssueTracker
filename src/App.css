@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.btn-primary {
+  background: #673ab7;
+  border: none;
+  padding: 10px 0;
+}
+.btn-primary:hover {
+  background: #580add;
+}

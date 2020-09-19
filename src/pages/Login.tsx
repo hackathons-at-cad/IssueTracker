@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import styled from "@emotion/styled";
@@ -18,6 +20,10 @@ export const StyledFormWrapper = styled.div`
     justify-content: center;
     align-item: center;
     vertical-align: middle;
+    padding-bottom: 1em;
+  }
+  .head-text p {
+    font-weight: bold;
   }
   .box {
     background: #673ab7;
@@ -30,15 +36,22 @@ export const StyledFormWrapper = styled.div`
   p {
     text-align: center;
   }
+  .link {
+    padding: 20px 0;
+  }
+  .link a {
+    color: #673ab7;
+  }
 `;
 
 const Login = () => {
   return (
     <StyledFormWrapper>
-      <p className="head-text">
+      <div className="head-text">
         {" "}
-        <div className="box"></div>Welcome Back
-      </p>
+        <div className="box"></div>
+        <p>Welcome Back</p>
+      </div>
       <Form>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email Address</Form.Label>
@@ -55,8 +68,8 @@ const Login = () => {
         <Button variant="primary" type="submit" block>
           Log In
         </Button>
-        <p>
-          <a href="/register">Create an account</a>
+        <p className="link">
+          <Link to="/register">Create an account</Link>
         </p>
       </Form>
     </StyledFormWrapper>

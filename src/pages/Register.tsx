@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { StyledFormWrapper } from "./Login";
@@ -6,10 +7,11 @@ import { StyledFormWrapper } from "./Login";
 const Register = () => {
   return (
     <StyledFormWrapper>
-      <p className="head-text">
+      <div className="head-text">
         {" "}
-        <div className="box"></div>Create Account
-      </p>
+        <div className="box"></div>
+        <p>Create Account</p>
+      </div>
       <Form>
         <Form.Group controlId="formText">
           <Form.Label>FirstName</Form.Label>
@@ -32,10 +34,10 @@ const Register = () => {
           <Form.Control type="password" placeholder="Input value" />
         </Form.Group>
         <Button variant="primary" type="submit" block>
-          Log In
+          Create Account
         </Button>
-        <p>
-          <a href="/register">Create an account</a>
+        <p className="link">
+          <Link to="/">Log In</Link>
         </p>
       </Form>
     </StyledFormWrapper>
